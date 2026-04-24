@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anurag Sharma | Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #00d2ff;
+            --secondary: #3a7bd5;
+            --text-main: #1f2937;
+            --text-muted: #4b5563;
+            --bg-light: #f3f4f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            padding: 40px 20px;
+            line-height: 1.5;
+        }
+
+        .resume-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            padding: 40px;
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid var(--bg-light);
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            color: var(--text-main);
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .contact-info span i {
+            color: var(--secondary);
+            margin-right: 5px;
+        }
+
+        section {
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            background: #f8fafc;
+            padding: 8px 15px;
+            margin-bottom: 15px;
+            color: var(--text-main);
+            border-left: 4px solid var(--secondary);
+        }
+
+        .summary-text {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style: none;
+        }
+
+        .skills-list li {
+            background: #eff6ff;
+            color: #1e40af;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .job-item, .project-item, .edu-item {
+            margin-bottom: 18px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 3px;
+        }
+
+        .item-header h3 {
+            font-size: 1rem;
+            color: var(--text-main);
+        }
+
+        .item-date {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        .item-sub {
+            font-size: 0.9rem;
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .item-details {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .item-details li {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 3px;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .item-details li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+
+        .print-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--secondary);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            border: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+        }
+
+        .print-btn:hover {
+            transform: scale(1.05);
+            background: #2563eb;
+        }
+
+        @media print {
+            .print-btn { display: none; }
+            body { padding: 0; background: white; }
+            .resume-container { box-shadow: none; padding: 0; max-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav-btns" style="position: fixed; bottom: 30px; right: 30px; display: flex; gap: 15px; z-index: 1000;">
+        <a href="index.html" class="print-btn" style="background: var(--text-main); text-decoration: none; position: relative; top: auto; left: auto;">
+            <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+        <button class="print-btn" onclick="window.print()" style="position: relative; bottom: auto; right: auto;">
+            <i class="fas fa-print"></i> Save as PDF
+        </button>
+    </div>
+
+    <div class="resume-container">
+        <header>
+            <h1>Anurag Sharma</h1>
+            <div class="contact-info">
+                <span><i class="fas fa-location-dot"></i> Jammu, India</span>
+                <span><i class="fas fa-phone"></i> +91 7006541878</span>
+                <span><i class="fas fa-envelope"></i> anurag012sharma@gmail.com</span>
+                <span><i class="fab fa-linkedin"></i> linkedin.com/in/anuragsharma9797</span>
+            </div>
+        </header>
+
+        <section>
+            <h2>Summary</h2>
+            <p class="summary-text">
+                Accomplished <strong>Mobile & Web Developer</strong> and <strong>BCA Graduate</strong> with practical experience in building Android applications using <strong>Java & XML</strong> and modern web solutions using <strong>React & Next.js</strong>. Currently working as an App Development Intern (Android) since May 2025, contributing to Play Store applications. Passionate about delivering high-quality user experiences across all digital platforms.
+            </p>
+        </section>
+
+        <section>
+            <h2>Technical Skills</h2>
+            <ul class="skills-list">
+                <li>Java + XML</li>
+                <li>Flutter & Dart</li>
+                <li>Firebase</li>
+                <li>REST APIs</li>
+                <li>UI/UX Design</li>
+                <li>Android Studio</li>
+                <li>Debugging</li>
+                <li>React.js</li>
+                <li>Git & GitHub</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Work Experience</h2>
+            <div class="job-item">
+                <div class="item-header">
+                    <h3>App Development Intern (Android)</h3>
+                    <span class="item-date">May 2025 – Present</span>
+                </div>
+                <div class="item-sub">APPZEST TECHNOLOGY PRIVATE LIMITED (Remote)</div>
+                <ul class="item-details">
+                    <li>Worked on Android applications using Java & XML.</li>
+                    <li>Designed and implemented UI screens based on XML layouts.</li>
+                    <li>Integrated REST APIs and handled backend responses.</li>
+                    <li>Implemented Firebase Authentication and other Firebase services.</li>
+                    <li>Fixed bugs, improved UI performance, and optimized app flow.</li>
+                    <li>Contributed to apps published and live on Google Play Store.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+            <div class="project-item">
+                <div class="item-sub">Company & Mobile Projects (Google Play Store Live)</div>
+                <ul class="item-details">
+                    <li><strong>mCash:</strong> Android app development using Java & XML, API integration.</li>
+                    <li><strong>Wallpaper Hub:</strong> Flutter UI, category search, and REST API integration.</li>
+                    <li><strong>AI Chat Bot:</strong> Smart assistant developed with Flutter and OpenAI API.</li>
+                    <li><strong>Cash Adda:</strong> Finance app screens using XML and JSON handling.</li>
+                </ul>
+            </div>
+            <div class="project-item">
+                <div class="item-sub">Web Development Projects</div>
+                <ul class="item-details">
+                    <li><strong>Real Estate Web:</strong> Premium property platform with React, Node.js, and Maps API.</li>
+                    <li><strong>Netflix Clone:</strong> High-fidelity streaming UI using React and TMDB API.</li>
+                    <li><strong>Secure Login System:</strong> Advanced authentication UI with real-time validation.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <div class="edu-item">
+                <div class="item-header">
+                    <h3>Bachelor of Computer Applications (BCA)</h3>
+                    <span class="item-date">11/2021 – 07/2024</span>
+                </div>
+                <p class="summary-text">Institute of Management Science (IMS), Jammu</p>
+            </div>
+            <div class="edu-item">
+                <div class="item-header">
+                    <h3>Intermediate (HSC)</h3>
+                    <span class="item-date">06/2019 – 05/2020</span>
+                </div>
+                <p class="summary-text">MHS D.A.V Public School Rs pura, Jammu</p>
+            </div>
+            <div class="edu-item">
+                <div class="item-header">
+                    <h3>Matriculation (SSC)</h3>
+                    <span class="item-date">06/2017 – 05/2018</span>
+                </div>
+                <p class="summary-text">MHS D.A.V Public School Rs pura, Jammu</p>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
