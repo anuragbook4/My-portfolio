@@ -24,30 +24,31 @@
         body {
             background-color: var(--bg-light);
             color: var(--text-main);
-            padding: 40px 20px;
-            line-height: 1.5;
+            padding: 10px;
+            line-height: 1.3;
+            font-size: 13px;
         }
 
         .resume-container {
-            max-width: 900px;
+            max-width: 850px;
             margin: 0 auto;
             background: white;
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            padding: 40px;
+            padding: 25px 35px;
             border-radius: 8px;
         }
 
         header {
             border-bottom: 2px solid var(--bg-light);
-            padding-bottom: 20px;
-            margin-bottom: 25px;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
             text-align: center;
         }
 
         header h1 {
-            font-size: 2.2rem;
+            font-size: 1.5rem;
             color: var(--text-main);
-            margin-bottom: 5px;
+            margin-bottom: 2px;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
@@ -56,8 +57,8 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
-            font-size: 0.9rem;
+            gap: 10px;
+            font-size: 0.8rem;
             color: var(--text-muted);
         }
 
@@ -67,15 +68,15 @@
         }
 
         section {
-            margin-bottom: 25px;
+            margin-bottom: 10px;
         }
 
         h2 {
-            font-size: 1.1rem;
+            font-size: 0.9rem;
             text-transform: uppercase;
             background: #f8fafc;
-            padding: 8px 15px;
-            margin-bottom: 15px;
+            padding: 3px 10px;
+            margin-bottom: 5px;
             color: var(--text-main);
             border-left: 4px solid var(--secondary);
         }
@@ -86,23 +87,24 @@
         }
 
         .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px;
             list-style: none;
         }
 
         .skills-list li {
             background: #eff6ff;
             color: #1e40af;
-            padding: 4px 12px;
+            padding: 2px 8px;
             border-radius: 4px;
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             font-weight: 600;
+            text-align: center;
         }
 
         .job-item, .project-item, .edu-item {
-            margin-bottom: 18px;
+            margin-bottom: 8px;
         }
 
         .item-header {
@@ -136,9 +138,9 @@
         }
 
         .item-details li {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: var(--text-muted);
-            margin-bottom: 3px;
+            margin-bottom: 1px;
             position: relative;
             padding-left: 15px;
         }
@@ -175,9 +177,24 @@
         }
 
         @media print {
-            .print-btn { display: none; }
-            body { padding: 0; background: white; }
-            .resume-container { box-shadow: none; padding: 0; max-width: 100%; }
+            @page {
+                margin: 0;
+                size: auto;
+            }
+            .print-btn, .nav-btns { display: none !important; }
+            body { 
+                padding: 1.5cm; 
+                background: white; 
+                -webkit-print-color-adjust: exact;
+            }
+            .resume-container { 
+                box-shadow: none; 
+                padding: 0; 
+                max-width: 100%; 
+                margin: 0;
+            }
+            section { margin-bottom: 8px; }
+            .item-details li { margin-bottom: 1px; }
         }
     </style>
 </head>
@@ -215,13 +232,16 @@
             <ul class="skills-list">
                 <li>Java + XML</li>
                 <li>Flutter & Dart</li>
+                <li>React.js</li>
+                <li>JavaScript (ES6+)</li>
+                <li>HTML5 & CSS3</li>
                 <li>Firebase</li>
                 <li>REST APIs</li>
-                <li>UI/UX Design</li>
                 <li>Android Studio</li>
                 <li>Debugging</li>
-                <li>React.js</li>
                 <li>Git & GitHub</li>
+                <li>UI/UX Design</li>
+                <li>Python</li>
             </ul>
         </section>
 
@@ -250,9 +270,9 @@
                 <div class="item-sub">Company & Mobile Projects (Google Play Store Live)</div>
                 <ul class="item-details">
                     <li><strong>mCash:</strong> Android app development using Java & XML, API integration.</li>
-                    <li><strong>Wallpaper Hub:</strong> Flutter UI, category search, and REST API integration.</li>
-                    <li><strong>AI Chat Bot:</strong> Smart assistant developed with Flutter and OpenAI API.</li>
-                    <li><strong>Cash Adda:</strong> Finance app screens using XML and JSON handling.</li>
+                    <li><strong>Tap Tap:</strong> Professional Android app live on Play Store, UI optimization.</li>
+                    <li><strong>CashAdda:</strong> Rewards-based Android application live on Play Store.</li>
+                    <li><strong>Wallpaper 2026:</strong> Flutter UI, category search, and REST API integration.</li>
                 </ul>
             </div>
             <div class="project-item">
@@ -269,24 +289,18 @@
             <h2>Education</h2>
             <div class="edu-item">
                 <div class="item-header">
-                    <h3>Bachelor of Computer Applications (BCA)</h3>
-                    <span class="item-date">11/2021 – 07/2024</span>
+                    <h3>BCA (Bachelors of Computer Applications)</h3>
+                    <span class="item-date">2021 – 2024</span>
                 </div>
-                <p class="summary-text">Institute of Management Science (IMS), Jammu</p>
+                <p class="summary-text" style="font-size: 0.8rem;">Institute of Management Science (IMS), Jammu</p>
             </div>
-            <div class="edu-item">
-                <div class="item-header">
-                    <h3>Intermediate (HSC)</h3>
-                    <span class="item-date">06/2019 – 05/2020</span>
-                </div>
-                <p class="summary-text">MHS D.A.V Public School Rs pura, Jammu</p>
+            <div class="edu-item" style="display: flex; justify-content: space-between; align-items: baseline;">
+                <p><strong>Intermediate (HSC):</strong> MHS D.A.V Public School, Jammu</p>
+                <span class="item-date">2019 – 2020</span>
             </div>
-            <div class="edu-item">
-                <div class="item-header">
-                    <h3>Matriculation (SSC)</h3>
-                    <span class="item-date">06/2017 – 05/2018</span>
-                </div>
-                <p class="summary-text">MHS D.A.V Public School Rs pura, Jammu</p>
+            <div class="edu-item" style="display: flex; justify-content: space-between; align-items: baseline;">
+                <p><strong>Matriculation (SSC):</strong> MHS D.A.V Public School, Jammu</p>
+                <span class="item-date">2017 – 2018</span>
             </div>
         </section>
     </div>
